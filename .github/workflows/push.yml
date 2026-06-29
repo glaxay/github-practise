@@ -2,7 +2,7 @@ name : deploymet exercise 1
 on : push
 jobs:
     deploy:
-        runs-on: ubuntu-lastest
+        runs-on: ubuntu-latest
         steps:
             - name: Get the code
               uses: actions/checkout@v3

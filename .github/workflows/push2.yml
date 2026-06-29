@@ -1,8 +1,8 @@
-name : deploymet exercise 1
+name : deploymet exercise 2
 on : push
 jobs:
     lint:
-        runs-on: ubuntu-lastest
+        runs-on: ubuntu-latest
         steps:
             - name: Get the code
               uses: actions/checkout@v3
@@ -11,7 +11,7 @@ jobs:
             - name: lint
               run: npm run lint
     test:
-        runs-on: ubuntu-lastest
+        runs-on: ubuntu-latest
         steps:
             - name: Get the code
               uses: actions/checkout@v3
@@ -21,7 +21,7 @@ jobs:
               run : npm run test
     deploy:
 
-        runs-on: ubuntu-lastest
+        runs-on: ubuntu-latest
         steps:
             - name: Get the code
               uses: actions/checkout@v3
