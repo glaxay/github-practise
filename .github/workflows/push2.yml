@@ -1,7 +1,7 @@
 name : deploymet exercise 1
 on : push
 jobs:
-    deploy:
+    lint:
         runs-on: ubuntu-lastest
         steps:
             - name: Get the code
@@ -10,7 +10,22 @@ jobs:
               run: npm ci
             - name: lint
               run: npm run lint
+    test:
+        runs-on: ubuntu-lastest
+        steps:
+            - name: Get the code
+              uses: actions/checkout@v3
+            - name: install dependies
+              run: npm ci
             - name: test cide
               run : npm run test
+    deploy:
+
+        runs-on: ubuntu-lastest
+        steps:
+            - name: Get the code
+              uses: actions/checkout@v3
+            - name: install dependies
+              run: npm ci
             - name: build code
               run: npm run build        
